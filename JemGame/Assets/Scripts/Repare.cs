@@ -7,17 +7,20 @@ public class Repare : MonoBehaviour
     public GameObject broken;
     public GameObject repared;
     public bool InTrigger = false;
+    public int KolMet;
+    public int KolEnergy;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && InTrigger == true)
+        if (Input.GetKeyDown(KeyCode.E) && InTrigger == true && Counter.coinAmount >= KolMet && Energy.energyAmount >= KolEnergy)
         {
             broken.SetActive(false);
             repared.SetActive(true);
             Energy.energyAmount -= 10;
-            Counter.coinAmount -= 10;
+            Counter.coinAmount -= 10; 
             GetComponent<Collider2D>().enabled = false;
             this.enabled = false;
+
         }
     }
     void OnTriggerEnter2D(Collider2D Other2)

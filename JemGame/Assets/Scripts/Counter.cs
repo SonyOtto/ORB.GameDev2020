@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Counter : MonoBehaviour
 {
 	
-	public static int coinAmount = 100;
+	public static int coinAmount = 10;
 	Text text;
 	
     // Start is called before the first frame update

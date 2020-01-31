@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterEnergy : MonoBehaviour
 {
-    public float charEnergy = 100f;
+    public int charEnergy = 100;
     // Start is called before the first frame update
     void Start()
     {
