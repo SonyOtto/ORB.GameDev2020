@@ -50,7 +50,9 @@ MonoBehaviour:
   repared: {fileID: 2453388361210533282}
   InTrigger: 0
   KolMet: 10
-  KolEnergy: 20
+  KolEnergy: 15
+  IsEnerdy: 300
+  IsMet: 10
 --- !u!61 &2453388360506216499
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -87,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2453388361210533281}
   - component: {fileID: 2453388361210533280}
+  - component: {fileID: 559475423}
   m_Layer: 0
   m_Name: Repared
   m_TagString: Untagged
@@ -102,7 +105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2453388361210533282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.535, y: 0, z: 0}
+  m_LocalPosition: {x: -0.535, y: 0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2453388360506216498}
@@ -158,6 +161,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &559475423
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2453388361210533282}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ab284a412ae47f4499a009920b78b481, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2453388361893400345
 GameObject:
   m_ObjectHideFlags: 0
