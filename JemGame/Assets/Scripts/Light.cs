@@ -6,10 +6,13 @@ public class Light : MonoBehaviour
 {
     public GameObject Light_player;
     public GameObject Wall;
+   
     void Update()
     {
         Light_player.SetActive(false);
         Wall.SetActive(false);
-        
+       
     }
+
+    
 }
