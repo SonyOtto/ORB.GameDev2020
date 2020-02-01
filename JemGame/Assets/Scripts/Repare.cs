@@ -11,22 +11,23 @@ public class Repare : MonoBehaviour
     public int KolEnergy;
     int needEnerdy;
     int needMet;
-    public int IsEnerdy;
+    public int IsEnergy;
     public int IsMet;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && InTrigger == true && Counter.coinAmount >= KolMet && needMet != IsMet)
         {
-            Counter.coinAmount -= 10;
-            needMet += 10;
+            Counter.coinAmount -= KolMet;
+            needMet += KolMet;
 
         }
-        if (Input.GetKeyDown(KeyCode.E) && InTrigger == true && Energy.energyAmount >= KolEnergy && needEnerdy != IsEnerdy)
+        if (Input.GetKeyDown(KeyCode.E) && InTrigger == true && Energy.energyAmount >= KolEnergy && needEnerdy != IsEnergy)
         {
-                Energy.energyAmount -= 15;
-                needEnerdy += 15;
-            if (needMet == 10 && needEnerdy == 300)
+                Energy.energyAmount -= KolEnergy;
+                needEnerdy += KolEnergy;
+
+            if (needMet == IsMet && needEnerdy == IsEnergy)
             {
                 broken.SetActive(false);
                 repared.SetActive(true);
