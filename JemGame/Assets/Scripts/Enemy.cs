@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    //public Animator animator;
+    public Animator animator;
     public GameObject drop;
     public GameObject TopDrop;
     public int maxHealth = 100;
@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
 	{
 		currentHealth -= damage;
 		
-		//animator.SetTrigger("Hurt");
+		animator.SetTrigger("Hurt");
 		
 		
 		if (currentHealth <= 0)

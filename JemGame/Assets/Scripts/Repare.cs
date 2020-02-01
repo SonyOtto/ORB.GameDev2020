@@ -9,19 +9,32 @@ public class Repare : MonoBehaviour
     public bool InTrigger = false;
     public int KolMet;
     public int KolEnergy;
+    int needEnerdy;
+    int needMet;
+    public int IsEnerdy;
+    public int IsMet;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && InTrigger == true && Counter.coinAmount >= KolMet && Energy.energyAmount >= KolEnergy)
+        if (Input.GetKeyDown(KeyCode.E) && InTrigger == true && Counter.coinAmount >= KolMet && needMet != IsMet)
         {
-            broken.SetActive(false);
-            repared.SetActive(true);
-            Energy.energyAmount -= 10;
-            Counter.coinAmount -= 10; 
-            GetComponent<Collider2D>().enabled = false;
-            this.enabled = false;
+            Counter.coinAmount -= 10;
+            needMet += 10;
 
         }
+        if (Input.GetKeyDown(KeyCode.E) && InTrigger == true && Energy.energyAmount >= KolEnergy && needEnerdy != IsEnerdy)
+        {
+                Energy.energyAmount -= 15;
+                needEnerdy += 15;
+            if (needMet == 10 && needEnerdy == 300)
+            {
+                broken.SetActive(false);
+                repared.SetActive(true);
+                GetComponent<Collider2D>().enabled = false;
+                this.enabled = false;
+            }
+        }
+        
     }
     void OnTriggerEnter2D(Collider2D Other2)
     {
