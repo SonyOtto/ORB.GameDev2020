@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3614002417454448970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.185, y: 0.224, z: 0}
+  m_LocalPosition: {x: 1.7, y: 0.224, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3614002418298940190}
@@ -58,7 +58,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3614002417487543138}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.54, z: -10}
+  m_LocalPosition: {x: 0, y: 5.89, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3614002418298940190}
@@ -74,7 +74,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0.05927898, b: 0.3301887, a: 0}
+  m_BackGroundColor: {r: 0.5021805, g: 0.5152682, b: 0.5754717, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -91,7 +91,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.15
+  orthographic size: 4.6557837
   m_Depth: 0.02
   m_CullingMask:
     serializedVersion: 2
@@ -213,7 +213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3614002417965705757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.393, z: 0}
+  m_LocalPosition: {x: 0, y: 1.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3614002418298940190}
@@ -251,7 +251,7 @@ Transform:
   m_GameObject: {fileID: 3614002418298938597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.714212, y: 0.714212, z: 0.714212}
   m_Children:
   - {fileID: 3614002418366806749}
   - {fileID: 3614002417965705754}
@@ -300,7 +300,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f2ed27d6c1c3ccc48959bcca269d88f0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e2c4e99afc766314f8d693dbd98d86eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -407,8 +407,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017400026, y: 0.2052}
-  m_Size: {x: 0.15288037, y: 0.37792}
+  m_Offset: {x: -0.08238745, y: -0.000592947}
+  m_Size: {x: 2.1241622, y: 3.9522219}
   m_Direction: 0
 --- !u!114 &3614002418298940189
 MonoBehaviour:
@@ -426,7 +426,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 512
-  attackRange: 0.14
+  attackRange: 0.95
   attackDamage: 20
   attackRate: 2
 --- !u!1 &3614002418366806748
@@ -453,7 +453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3614002418366806748}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.020999998, z: 0}
+  m_LocalPosition: {x: 0, y: -1.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3614002418298940190}
