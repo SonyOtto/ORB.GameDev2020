@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 	public CharacterController2D controller;
 	public Animator animator;
+    public Rigidbody2D rig;
    
 	public float runSpeed = 10f;   
 	float horizontalMove = 0f;
@@ -37,4 +38,24 @@ public class PlayerMovement : MonoBehaviour
 		controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
 		jump = false;
 	}
+
+    void OnTriggerEnter2D(Collider2D Other2)
+    {
+        if (Other2.tag == "Lesnica")
+        {
+            rig.gravityScale = 0;
+
+        }
+
+    }
+
+    void OnTriggerExit2D(Collider2D Other2)
+    {
+        if (Other2.tag == "Lesnica")
+        {
+            rig.gravityScale = 3;
+
+        }
+
+    }
 }

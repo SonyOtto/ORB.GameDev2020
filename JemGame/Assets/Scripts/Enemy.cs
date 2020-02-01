@@ -33,8 +33,7 @@ public class Enemy : MonoBehaviour
 	{
         //animator.SetBool("IsDead", true);
         Destroy(gameObject);       
-        drop = Instantiate(drop, new Vector3(transform.position.x, transform.position.y+0.1f, 0f), Quaternion.identity) as GameObject;
-        drop = Instantiate(drop, new Vector3(transform.position.x, transform.position.y+0.2f, 0f), Quaternion.identity) as GameObject;
+        drop = Instantiate(drop, new Vector3(transform.position.x, transform.position.y+0.1f, 0f), Quaternion.identity) as GameObject;       
         TopDrop = Instantiate(TopDrop, new Vector3(transform.position.x + 1.0f, transform.position.y - 0.0f, -1.2f), Quaternion.identity) as GameObject;
     }
 }
