@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 	bool jump = false;
 
     public AudioSource run;
+    public AudioSource IsJump;
 
     // Update is called once per frame
     void Update()
@@ -24,14 +25,18 @@ public class PlayerMovement : MonoBehaviour
         {
             run.Play();
         }
-        else { run.Stop(); }
-        //animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        else if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+            run.Stop();
+        }
+            //animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
             if (Input.GetButtonDown("Jump"))
 		{
 			jump = true;
-			//animator.SetBool("IsJumping", true);
-		}
+            IsJump.Play();
+            //animator.SetBool("IsJumping", true);
+        }
     }
 	
 	public void OnLanding()
