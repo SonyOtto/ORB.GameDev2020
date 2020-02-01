@@ -15,6 +15,7 @@ public class Weapon : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            Energy.energyAmount -= 5;
             StartCoroutine(Shoot());
         }
     }
