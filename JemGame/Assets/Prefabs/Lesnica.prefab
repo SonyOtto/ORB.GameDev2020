@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8593948881554112892
+--- !u!1 &8365410837893773326
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8593948881554112895}
-  - component: {fileID: 8593948881554112894}
-  - component: {fileID: 8593948881554112893}
-  - component: {fileID: 8593948881554112888}
+  - component: {fileID: 8365410837893773323}
+  - component: {fileID: 8365410837893773320}
+  - component: {fileID: 8365410837893773321}
   m_Layer: 0
-  m_Name: Charger
-  m_TagString: Charger
+  m_Name: Lesnica
+  m_TagString: Lesnica
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8593948881554112895
+--- !u!4 &8365410837893773323
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8593948881554112892}
+  m_GameObject: {fileID: 8365410837893773326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.392, y: 0.032, z: -4.2383475}
-  m_LocalScale: {x: 1.2175441, y: 1.2175441, z: 1.2175441}
+  m_LocalPosition: {x: 5.651, y: -9.231, z: 0}
+  m_LocalScale: {x: 1.1046829, y: 1.2993379, z: 0.974}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8593948881554112894
+--- !u!212 &8365410837893773320
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8593948881554112892}
+  m_GameObject: {fileID: 8365410837893773326}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -51,7 +50,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 75cded029ddcb7940ad78763dddc345c, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -71,53 +70,41 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -3
-  m_Sprite: {fileID: 21300000, guid: 4aa2ba7afefa3fd47a55e6be9a21b8e8, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 0eab315fb96a095468e13e6d02c221fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 2.05, y: 4.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8593948881554112893
+--- !u!61 &8365410837893773321
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8593948881554112892}
+  m_GameObject: {fileID: 8365410837893773326}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0106083155, y: 0.023182273}
+  m_Offset: {x: -0.023153782, y: 0.09596777}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.83, y: 5.18}
-    newSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1.98, y: 9.34}
+    newSize: {x: 2.05, y: 4.96}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.7556188, y: 5.129898}
+  m_Size: {x: 3.6707711, y: 9.057887}
   m_EdgeRadius: 0
---- !u!114 &8593948881554112888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8593948881554112892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25d9f400a464a7d41aa5e856de1f02df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

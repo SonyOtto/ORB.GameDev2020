@@ -14,10 +14,15 @@ public class Repare : MonoBehaviour
     public int IsEnergy;
     public int IsMet;
 
+    public GameObject drop;
+    public GameObject TopDrop;
+    public bool IsDrop = false;
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && InTrigger == true && Counter.coinAmount >= KolMet && needMet != IsMet)
         {
+            
             Counter.coinAmount -= KolMet;
             needMet += KolMet;
 
@@ -29,11 +34,20 @@ public class Repare : MonoBehaviour
 
             if (needMet == IsMet && needEnerdy == IsEnergy)
             {
+                IsDrop = true;
                 broken.SetActive(false);
                 repared.SetActive(true);
+                               
+
                 GetComponent<Collider2D>().enabled = false;
                 this.enabled = false;
             }
+        }
+        if (IsDrop == true)
+        {
+            //drop = Instantiate(drop, new Vector3(transform.position.x, transform.position.y + 0.1f, 0f), Quaternion.identity) as GameObject;
+            TopDrop = Instantiate(TopDrop, new Vector3(transform.position.x, transform.position.y, 0f), Quaternion.identity) as GameObject;
+            IsDrop = false;
         }
         
     }
