@@ -12,16 +12,22 @@ public class PlayerMovement : MonoBehaviour
 	float horizontalMove = 0f;
 	bool jump = false;
 
+    public AudioSource run;
+
     // Update is called once per frame
     void Update()
     {
 	
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        
-		//animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-		
-		if (Input.GetButtonDown("Jump"))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        {
+            run.Play();
+        }
+        else { run.Stop(); }
+        //animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+            if (Input.GetButtonDown("Jump"))
 		{
 			jump = true;
 			//animator.SetBool("IsJumping", true);
