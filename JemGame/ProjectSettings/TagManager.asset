@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Charger
   - Coins
+  - Water
   layers:
   - Default
   - TransparentFX
