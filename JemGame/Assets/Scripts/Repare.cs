@@ -17,6 +17,8 @@ public class Repare : MonoBehaviour
     public GameObject drop;
     public GameObject TopDrop;
     public bool IsDrop = false;
+
+    public AudioSource IsRepare;
     
     void Update()
     {
@@ -34,6 +36,7 @@ public class Repare : MonoBehaviour
 
             if (needMet == IsMet && needEnerdy == IsEnergy)
             {
+                IsRepare.Play();
                 IsDrop = true;
                 broken.SetActive(false);
                 repared.SetActive(true);
