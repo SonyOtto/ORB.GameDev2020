@@ -16,6 +16,7 @@ public class Special : MonoBehaviour
     bool chek3 = false;
 
     public bool allspecial = false;
+    public bool incharge = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,7 @@ public class Special : MonoBehaviour
         {
             allspecial = true;
         }
-        if (Input.GetKeyDown(KeyCode.E) && allspecial == true)
+        if (Input.GetKeyDown(KeyCode.E) && allspecial == true && incharge == true )
         {
             old.SetActive(false);
             ended.SetActive(true);
@@ -56,7 +57,18 @@ public class Special : MonoBehaviour
             chek3 = true;
             Destroy(GameObject.FindGameObjectWithTag("Disketa"));
         }
-
+        if (Other2.tag == "Charger_fix")
+        {
+            incharge = true;
+        }
+    }
+    void OnTriggerExit2D(Collider2D Other2)
+    {
+       
+        if (Other2.tag == "Charger_fix")
+        {
+            incharge = false;
+        }
     }
 
 }

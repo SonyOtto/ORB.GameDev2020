@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Energy : MonoBehaviour
 {
-    public static int energyAmount = 100;
+    public static int energyAmount = 1;
     int i;
     Text text;
     

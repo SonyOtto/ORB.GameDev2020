@@ -19,7 +19,7 @@ public class PlayerCombat : MonoBehaviour
     {
 		if (Time.time >= nextAttackTime)
 		{
-        if (Input.GetKeyDown(KeyCode.Space) && Energy.energyAmount > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && Energy.energyAmount >= 5)
 		{
             Energy.energyAmount -= 5;
             Attack();

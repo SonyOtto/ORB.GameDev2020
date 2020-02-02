@@ -16,6 +16,7 @@ TagManager:
   - Jumper
   - Repair
   - Lock
+  - Charger_fix
   layers:
   - Default
   - TransparentFX
