@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource run;
     public AudioSource IsJump;
 
+    public float repareRate = 5f;
+    float nextRepareTime = 0f;
+
     // Update is called once per frame
     void Update()
     {
@@ -29,20 +32,29 @@ public class PlayerMovement : MonoBehaviour
         {
             run.Stop();
         }
-            //animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        if (Time.time >= nextRepareTime)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                animator.SetTrigger("Repare");
+                nextRepareTime = Time.time + 0.5f / repareRate;
+
+            }
+        }
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
             if (Input.GetButtonDown("Jump"))
 		{
 			jump = true;
             IsJump.Play();
-            //animator.SetBool("IsJumping", true);
         }
+        
     }
 	
-	public void OnLanding()
-	{
-		//animator.SetBool("IsJumping", false);
-	}	
+	//public void OnLanding()
+	//{
+       
+ //   }	
 	
 	void FixedUpdate()
 	{
