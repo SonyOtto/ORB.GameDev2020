@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 	bool jump = false;
 
     public AudioSource run;
-    public AudioSource IsJump;
+    //public AudioSource IsJump;
 
     public float repareRate = 5f;
     float nextRepareTime = 0f;
@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
 		{
 			jump = true;
-            IsJump.Play();
+            //IsJump.Play();
         }
         
     }
