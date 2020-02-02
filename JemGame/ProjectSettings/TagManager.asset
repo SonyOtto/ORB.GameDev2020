@@ -8,6 +8,9 @@ TagManager:
   - Coins
   - Water
   - Lesnica
+  - Bottle
+  - Shesternya
+  - Disketa
   layers:
   - Default
   - TransparentFX

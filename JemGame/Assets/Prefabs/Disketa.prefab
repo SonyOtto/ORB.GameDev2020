@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7621865079293973500}
   m_Layer: 0
   m_Name: Disketa
-  m_TagString: Untagged
+  m_TagString: Disketa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
