@@ -11,6 +11,11 @@ TagManager:
   - Bottle
   - Shesternya
   - Disketa
+  - Enemy
+  - Hit
+  - Jumper
+  - Repair
+  - Lock
   layers:
   - Default
   - TransparentFX
