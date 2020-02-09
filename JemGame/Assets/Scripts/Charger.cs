@@ -9,13 +9,10 @@ public class Charger : MonoBehaviour
     {
         if (Other2.tag == "Player" && Energy.energyAmount < 100)
         {
-            Invoke("IsCharge", 3);
+            Energy.energyAmount = 100;
         }
     }
-    void IsCharge()
-    {
-        Energy.energyAmount = 100;
-    }
+   
 
     
    

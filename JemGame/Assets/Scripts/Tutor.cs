@@ -14,7 +14,7 @@ public class Tutor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("GameStart",1);
+        
     }
 
     // Update is called once per frame
@@ -73,10 +73,7 @@ public class Tutor : MonoBehaviour
             pop1[5].SetActive(false);
         }
     }
-        void GameStart()
-    {
-        pop1[0].SetActive(false);
-    }
+      
     
     
 }

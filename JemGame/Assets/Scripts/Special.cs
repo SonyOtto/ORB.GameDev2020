@@ -10,6 +10,10 @@ public class Special : MonoBehaviour
 
     public GameObject old;
     public GameObject ended;
+    public GameObject Lock;
+    public GameObject Unlock;
+    public GameObject MainCamera;
+    public GameObject EndCamera;
 
     bool chek1 = false;
     bool chek2 = false;
@@ -17,6 +21,8 @@ public class Special : MonoBehaviour
 
     public bool allspecial = false;
     public bool incharge = false;
+    public bool unlockdoor = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +40,11 @@ public class Special : MonoBehaviour
         {
             old.SetActive(false);
             ended.SetActive(true);
-            
+            Unlock.SetActive(true);
+            Destroy(Lock);
+            Destroy(Unlock, 2);
+            unlockdoor = true;
+
         }
     }
     void OnTriggerEnter2D(Collider2D Other2)
@@ -61,6 +71,10 @@ public class Special : MonoBehaviour
         {
             incharge = true;
         }
+        if (Other2.tag == "Lock" && unlockdoor == true)
+        {
+            Invoke("End", 1);
+        }
     }
     void OnTriggerExit2D(Collider2D Other2)
     {
@@ -69,6 +83,13 @@ public class Special : MonoBehaviour
         {
             incharge = false;
         }
+
+    }
+
+    void End()
+    {
+        MainCamera.SetActive(false);
+        EndCamera.SetActive(true);
     }
 
 }

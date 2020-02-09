@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-	
+
+	public GameObject Low;
 	public Animator animator;	
 	public Transform attackPoint;
 	public LayerMask enemyLayers;
@@ -17,14 +18,23 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		if (Input.GetKeyDown(KeyCode.Space) && Energy.energyAmount < 5)
+		{
+			Low.SetActive(true);
+			Invoke("Lowoff", 0.5f);
+		}	
+
 		if (Time.time >= nextAttackTime)
 		{
-        if (Input.GetKeyDown(KeyCode.Space) && Energy.energyAmount >= 5)
-		{
-            Energy.energyAmount -= 5;
-            Attack();
-			nextAttackTime = Time.time + 1f/ attackRate;			
-		}
+			
+			if (Input.GetKeyDown(KeyCode.Space) && Energy.energyAmount >= 5)
+			{
+				Low.SetActive(false);
+				Energy.energyAmount -= 5;
+				Attack();
+				nextAttackTime = Time.time + 1f / attackRate;
+			}
+
 		}
     }
 	
@@ -48,5 +58,10 @@ public class PlayerCombat : MonoBehaviour
 			return;
 				
 		Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+	}
+
+	void Lowoff()
+	{
+		Low.SetActive(false);
 	}
 }

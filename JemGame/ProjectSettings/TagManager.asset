@@ -17,6 +17,9 @@ TagManager:
   - Repair
   - Lock
   - Charger_fix
+  - Light_fix
+  - Pipe_fix
+  - Car_fix
   layers:
   - Default
   - TransparentFX

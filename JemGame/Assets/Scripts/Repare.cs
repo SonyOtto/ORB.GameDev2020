@@ -9,52 +9,69 @@ public class Repare : MonoBehaviour
     public bool InTrigger = false;
     public int KolMet;
     public int KolEnergy;
-    int needEnerdy;
-    int needMet;
-    public int IsEnergy;
-    public int IsMet;
 
-    public GameObject drop;
     public GameObject TopDrop;
     public bool IsDrop = false;
 
     public AudioSource IsRepare;
+	
+	public GameObject arrow;
+    public GameObject Low;
+    int Metal, Energya;
 
+    void Start()
+    {
+       Metal = this.GetComponent<Resurses>().needMet;
+       Energya = this.GetComponent<Resurses>().needEnergy;
+    }
     
 
     void Update()
     {
+       
 
-        if (Input.GetKeyDown(KeyCode.E) && InTrigger == true && Counter.coinAmount >= KolMet && needMet != IsMet)
+        if (Input.GetKeyDown(KeyCode.E) && InTrigger == true)
         {
 
-            Counter.coinAmount -= KolMet;
-            needMet += KolMet;
-
-        }    
-        if (Input.GetKeyDown(KeyCode.E) && InTrigger == true && Energy.energyAmount >= KolEnergy)
+            if (Counter.coinAmount > 0 && Metal > 0)
             {
-               
-                Energy.energyAmount -= KolEnergy;
-                needEnerdy += KolEnergy;
-            
-                
+
+                Counter.coinAmount -= KolMet;
+                Metal -= KolMet;
             }
-        if (Input.GetKeyDown(KeyCode.E) && needMet == IsMet && needEnerdy == IsEnergy)
-        {
-            IsRepare.Play();
-            IsDrop = true;
-            broken.SetActive(false);
-            repared.SetActive(true);
 
 
-            GetComponent<Collider2D>().enabled = false;
-            this.enabled = false;
+            if (Energy.energyAmount >= KolEnergy && Energya >= 0)
+            {
+
+                Energy.energyAmount -= KolEnergy;
+                Energya -= KolEnergy;
+            }
+            else
+            {
+                Low.SetActive(true);
+                Invoke("Lowoff", 0.5f);
+            }
+
+
+            if (Metal <= 0 && Energya <= 0)
+            {
+                IsRepare.Play();
+                IsDrop = true;
+                Destroy(broken);
+                repared.SetActive(true);
+
+                GetComponent<Collider2D>().enabled = false;
+                this.enabled = false;
+            }
+
         }
+     
+        
+
         if (IsDrop == true)
             {
-                //drop = Instantiate(drop, new Vector3(transform.position.x, transform.position.y + 0.1f, 0f), Quaternion.identity) as GameObject;
-                TopDrop = Instantiate(TopDrop, new Vector3(transform.position.x, transform.position.y, 0f), Quaternion.identity) as GameObject;
+                TopDrop = Instantiate(TopDrop, new Vector3(transform.position.x + 5f, transform.position.y), Quaternion.identity) as GameObject;
                 IsDrop = false;
             }
            
@@ -65,40 +82,24 @@ public class Repare : MonoBehaviour
     {
 
         if (Other2.tag == "Player")
-        {
+        {			
             InTrigger = true;
-
-        }
-        else {
-            InTrigger = false;
-        }
+			arrow.SetActive(true);
+        }       
     }
-    //void RepareAnim()
-    //{      
-    //    if (Input.GetKeyDown(KeyCode.E) && InTrigger == true && Energy.energyAmount >= KolEnergy && needEnerdy != IsEnergy)
-    //    {
-    //        Energy.energyAmount -= KolEnergy;
-    //        needEnerdy += KolEnergy;
+	void OnTriggerExit2D(Collider2D Other2)
+    {
+
+        if (Other2.tag == "Player")
+        {		         
+			arrow.SetActive(false);
+            InTrigger = false;
+        }        
+    }
+    void Lowoff()
+    {
+        Low.SetActive(false);
+    }
 
 
-    //        if (needMet == IsMet && needEnerdy == IsEnergy)
-    //        {
-    //            IsRepare.Play();
-    //            IsDrop = true;
-    //            broken.SetActive(false);
-    //            repared.SetActive(true);
-
-
-    //            GetComponent<Collider2D>().enabled = false;
-    //            this.enabled = false;
-    //        }
-    //    }
-    //    if (IsDrop == true)
-    //    {
-    //        //drop = Instantiate(drop, new Vector3(transform.position.x, transform.position.y + 0.1f, 0f), Quaternion.identity) as GameObject;
-    //        TopDrop = Instantiate(TopDrop, new Vector3(transform.position.x, transform.position.y, 0f), Quaternion.identity) as GameObject;
-    //        IsDrop = false;
-    //    }
-    //}
-   
 }
